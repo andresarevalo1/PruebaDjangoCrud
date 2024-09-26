@@ -1,5 +1,5 @@
-se trabajo en visual studio code
-Se creo un entorno virtual env
+Se trabajo en visual studio code-
+Se creo un entorno virtual env-
 se creo una base de datos en Mysql workbench la cual fue conectada en visualstudio code
 
 
