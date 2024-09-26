@@ -1,0 +1,44 @@
+{% extends '../base.html' %}
+{% block title %}Detalles del Empleado{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-md-center text-center mt-5"> <!-- Centra la fila y añade márgenes superiores -->
+    <div class="col-md-5 mb-2">
+        <div class="card shadow">
+            <!-- Ícono de OK -->
+            <div class="mt-3">
+                <i class="bi bi-check-circle" style="font-size: 3rem; color: green;"></i> <!-- Icono de OK centrado -->
+            </div>
+
+            <div class="card-body">
+                <p class="card-title">
+                    <strong>Nombre Empleado:</strong> {{ empleado.nombre_empleado }}
+                </p>
+                <p class="card-text buttom mb-3">
+                    <strong>Apellido Empleado: </strong>{{ empleado.apellido_empleado }}
+                </p>
+                <p class="card-text buttom mb-3">
+                    <strong>Edad Empleado:</strong> {{ empleado.edad_empleado }} Años
+                </p>
+                <p class="card-text buttom mb-3">
+                    <strong>Género Empleado:</strong> {{ empleado.genero_empleado }}
+                </p>
+                <p class="card-text buttom mb-3">
+                    <strong>Email Empleado:</strong> {{ empleado.email_empleado }}
+                </p>
+                <p class="card-text buttom mb-3">
+                    <strong>Salario Empleado:</strong> {{ empleado.salario_empleado }}
+                </p>
+                <p class="card-text">{{ empleado.created_at|date:"M d, Y" }}</p>
+
+                <hr />
+
+                <a class="mt-5" href="{% url 'listar_empleados' %}">
+                    <i class="bi bi-arrow-left-circle"> Volver</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
